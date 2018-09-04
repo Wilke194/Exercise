@@ -4,11 +4,10 @@
  *
  * @return Array
  */
-function get_Users_csv()
+function get_file_as_assoc_array($path)
 {
-    $config =parse_ini_file("config.ini");
     //csv to associative array from https://stackoverflow.com/a/41942299
-    $rows = array_map('str_getcsv', file($config["csv_User"]));
+    $rows = array_map('str_getcsv', file($path));
     $header = array_shift($rows);
     $users = array();
     foreach ($rows as $row) {

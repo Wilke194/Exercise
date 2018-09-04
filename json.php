@@ -4,11 +4,9 @@
  *
  * @return Array
  */
-function get_Users_json()
+function get_file_as_assoc_array($path)
 {
-    $config =parse_ini_file("config.ini");
-    $file=file_get_contents($config["json_User"]);
-    $users = json_decode($file, true);
+    $users = json_decode($path, true);
     return $users;
 }
 ?>
