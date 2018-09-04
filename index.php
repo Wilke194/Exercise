@@ -22,7 +22,7 @@ if ($url_array[2]=="users") {
     {
         // A bit of formatting to make everything look better
         echo '<pre style="word-wrap: break-word; white-space: pre-wrap;">';
-        $users.display_users($users, $limit, $offset, $filter);
+        $users->display_users( $limit, $offset, $filter);
         echo "</pre>";
     }
 }
@@ -32,7 +32,7 @@ if ($url_array[2]=="user") {
     if (filter_var($user_id, FILTER_VALIDATE_INT)!==false) {
         // Again formatting
         echo '<pre style="word-wrap: break-word; white-space: pre-wrap;">';
-        $users.display_user($users, $user_id);
+        $users->display_user($user_id);
         echo "</pre>";
     }else { echo "User with id ".$user_id." does not exist";
     }

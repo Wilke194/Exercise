@@ -1,6 +1,8 @@
 <?php
 /**
  * returns the Users loaded from a json file
+*
+ *@param string $path filepath
  *
  * @return Array
  */

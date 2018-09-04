@@ -2,6 +2,8 @@
 /**
  * returns the Users loaded from a csv file
  *
+ *@param string $path filepath
+ *
  * @return Array
  */
 function get_file_as_assoc_array($path)
